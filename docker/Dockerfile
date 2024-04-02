@@ -1,6 +1,6 @@
 FROM python:3.12-alpine as builder
 
-RUN apk add --no-cache git gcc && \
+RUN apk add --no-cache git gcc musl-dev python3-dev libffi-dev openssl-dev cargo && \
     pip install git+https://github.com/metallkopf/konnect.git@master#egg=konnect
 
 FROM python:3.12-alpine as base

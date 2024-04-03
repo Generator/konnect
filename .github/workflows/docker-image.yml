@@ -55,6 +55,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
+          visibility: public
           context: .
           file: ./docker/Dockerfile
           platforms: linux/amd64,linux/arm64
